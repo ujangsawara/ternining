@@ -1,3 +1,11 @@
+apt update && apt upgrade
+
+cd wolf-m7m-cpuminer-v2
+
+./autogen.sh
+
+CFLAG="-02 mfpu=neon-vfpv4" ./configure
+
 make -j4
  
 ./minerd -a m7mhash -o stratum+tcp://m7m.asia.mine.zergpool.com:6033 -u DA4BAVgpi4gG5P4Tj1iwDhQEsMPhQHZuF5.tedbox -p c=DOGE 
